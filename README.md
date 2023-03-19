@@ -1,6 +1,7 @@
 # Fullstack.io-Fullstack_Rust_r6.2022.5
 
 ## Fullstack Rust
+
 ### The Complete Guide to Buildings Apps with the Rust Programming Language and Friends
 
 #### Written by Andrew Weiss Edited by Nate Murray
@@ -15,14 +16,17 @@ The authors and publisher have taken care in preparation of this book, but make 
 ### Changelog 
 
 #### Revision 6 (05-30-2022)
+
 • Fixes typos and grammatical errors in Chapters 2, 3, 4 and 5
 
 #### Revision 5 (02-20-2020)
+
 • Fixes two code imports in the WASM chapter
 
 • Fixes a change in the intermediate/messages-actix project and manuscript in Chapter 3
 
 #### Revision 4 (02-19-2020)
+
 • Added Chapter 7: Macros
 
 • Updates to the intro
@@ -34,10 +38,13 @@ The authors and publisher have taken care in preparation of this book, but make 
 • Addedbuilderandbuilder-testcode 
 
 #### Revision 3 (01-29-2020)
+
 • Pre-release revision 3
 
 #### Revision 2 (11-25-2019)
+
 • Pre-release revision 2
 
 #### Revision 1 (10-29-2019)
+
 • Initial pre-release version of the book
