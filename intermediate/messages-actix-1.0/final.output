@@ -1,0 +1,29 @@
+$ curl localhost:8080
+{"server_id":0,"request_count":1,"messages":[]}
+
+$ curl localhost:8080/lookup/2
+{"server_id":1,"request_count":1,"result":null}
+
+$ curl -X POST -H "Content-Type: application/json" -d '{"message": "hello"}' localhost:8080/send
+{"server_id":2,"request_count":1,"message":"hello"}
+
+$ curl -X POST -H "Content-Type: application/json" -d '{"message": "hello again"}' localhost:8080/send
+{"server_id":3,"request_count":1,"message":"hello again"}
+
+$ curl -X POST -H "Content-Type: application/json" -d '{"message": "goodbye"}' localhost:8080/send
+{"server_id":4,"request_count":1,"message":"goodbye"}
+
+$ curl localhost:8080
+{"server_id":5,"request_count":1,"messages":["hello","hello again","goodbye"]}
+
+$ curl localhost:8080/lookup/2
+{"server_id":6,"request_count":1,"result":"goodbye"}
+
+$ curl localhost:8080/lookup/0
+{"server_id":7,"request_count":1,"result":"hello"}
+
+$ curl localhost:8080/lookup/foo
+-> 404
+
+$ curl localhost:8080/lookup/99
+{"server_id":1,"request_count":2,"result":null}

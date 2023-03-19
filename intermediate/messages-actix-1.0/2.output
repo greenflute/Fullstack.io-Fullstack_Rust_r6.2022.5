@@ -1,0 +1,11 @@
+$ curl localhost:8080
+{"server_id":0,"request_count":1,"messages":[]}
+
+$ curl localhost:8080
+{"server_id":1,"request_count":1,"messages":[]}
+
+$ curl localhost:8080
+{"server_id":2,"request_count":1,"messages":[]}
+
+$ curl localhost:8080
+{"server_id":3,"request_count":1,"messages":[]}

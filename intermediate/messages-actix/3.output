@@ -1,0 +1,17 @@
+$ curl localhost:8080
+{"server_id":0,"request_count":1,"messages":[]}
+
+$ curl -X POST -H "Content-Type: application/json" -d '{"message": "hello friend"}' localhost:8080/send
+{"server_id":1,"request_count":1,"message":"hello friend"}
+
+$ curl localhost:8080
+{"server_id":2,"request_count":1,"messages":["hello friend"]}
+
+$ curl localhost:8080
+{"server_id":3,"request_count":1,"messages":["hello friend"]}
+
+$ curl -X POST -H "Content-Type: application/json" -d '{"message": "goodbye!!"}' localhost:8080/send
+{"server_id":4,"request_count":1,"message":"goodbye!!"}
+
+$ curl localhost:8080
+{"server_id":5,"request_count":1,"messages":["hello friend","goodbye!!"]}

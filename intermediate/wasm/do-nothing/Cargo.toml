@@ -1,0 +1,8 @@
+[package]
+name = "do-nothing"
+version = "0.1.0"
+authors = ["Your Name <you@eample.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]

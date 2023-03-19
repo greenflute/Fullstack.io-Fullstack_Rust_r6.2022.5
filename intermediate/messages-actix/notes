@@ -1,0 +1,46 @@
+curl localhost:8080/
+curl -X POST -H "Content-Type: application/json" -d '{"message": "hello there my friend"}' localhost:8080/send
+curl localhost:8080/
+curl localhost:8080/clear
+curl localhost:8080/
+curl -X POST -H "Content-Type: application/json" -d '{"malformed": "bork"}' localhost:8080/send
+ 
+ 
+ab -n 100000 -c 2000 -l -k 127.0.0.1:8080/
+
+Server Software:
+Server Hostname:        127.0.0.1
+Server Port:            8080
+
+Document Path:          /
+Document Length:        Variable
+
+Concurrency Level:      2000
+Time taken for tests:   1.464 seconds
+Complete requests:      100000
+Failed requests:        0
+Keep-Alive requests:    100000
+Total transferred:      84300000 bytes
+HTML transferred:       71000000 bytes
+Requests per second:    68285.53 [#/sec] (mean)
+Time per request:       29.289 [ms] (mean)
+Time per request:       0.015 [ms] (mean, across all concurrent requests)
+Transfer rate:          56215.53 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   9.6      0      95
+Processing:    10   27   6.9     26      94
+Waiting:        0   27   6.9     26      69
+Total:         10   28  12.4     26     127
+
+Percentage of the requests served within a certain time (ms)
+  50%     26
+  66%     28
+  75%     29
+  80%     30
+  90%     34
+  95%     46
+  98%     68
+  99%    100
+ 100%    127 (longest request)

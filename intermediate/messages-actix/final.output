@@ -1,0 +1,11 @@
+$ curl -X POST -H "Content-Type: application/json" -d '{"bad": "hello"}' localhost:8080/send
+{"server_id":0,"request_count":1,"error":"Json deserialize error: missing field `message` at line 1 column 16"}
+
+$ curl localhost:8080
+{"server_id":1,"request_count":1,"messages":[]}
+
+$ curl -X POST -H "Content-Type: application/json" -d '{"message": "hello"}' localhost:8080/send
+{"server_id":2,"request_count":1,"message":"hello"}
+
+$ curl localhost:8080
+{"server_id":3,"request_count":1,"messages":["hello"]}
